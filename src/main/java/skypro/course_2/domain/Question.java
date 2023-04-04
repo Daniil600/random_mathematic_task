@@ -3,7 +3,7 @@ package skypro.course_2.domain;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
-@Component
+
 
 public class Question implements Comparable<Question>{
     private String question;

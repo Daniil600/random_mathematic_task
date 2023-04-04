@@ -9,6 +9,7 @@ import java.util.Set;
 public interface QuestionService {
 
     Question questionAdd(String question, String answer);
+    Question questionFind(String question, String answer);
     Question questionAdd(Question question);
     Question questionRemove(String question, String answer);
     Collection<Question> getAll();

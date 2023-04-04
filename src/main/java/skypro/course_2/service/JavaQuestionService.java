@@ -21,6 +21,16 @@ public class JavaQuestionService implements QuestionService {
     }
 
     @Override
+    public Question questionFind(String question, String answer) {
+        Question question1 = new Question(question, answer);
+        if(check(question1)){
+            return question1;
+        }else {
+            throw new ExceptionQuestionIsNotFind("Вопрос не найден");
+        }
+    }
+
+    @Override
     public Question questionAdd(Question question) {
         if(check(question)){
             throw new ExceptionAlreadyQuestionIsBusy("Этот вопрос уже есть");
