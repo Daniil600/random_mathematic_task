@@ -29,9 +29,9 @@ public class JavaQuestionController {
     public Collection<Question> getall(){
         return questionService.getAll();
     }
-    @GetMapping(path = "get_random")
-    public Question getRandom(){
-        return questionService.getRandomQuestion();
+    @GetMapping(path = "find")
+    public Question getRandom(@RequestParam(required = false) String question, @RequestParam(required = false) String answer) {
+        return questionService.questionFind(question, answer);
     }
     @GetMapping(path = "remove")
     public Question remove(@RequestParam(required = false) String question, @RequestParam(required = false) String answer){

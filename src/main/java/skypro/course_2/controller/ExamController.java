@@ -17,10 +17,6 @@ public class ExamController {
     @Autowired
     ExamService examService;
 
-    public ExamController(ExamService examService, QuestionService questionService) {
-        this.examService = examService;
-    }
-
     @GetMapping(path = "/questions")
     public Collection<Question> questions (@RequestParam int amount){
         return examService.getQuestions(amount);
